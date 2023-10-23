@@ -3,8 +3,7 @@ const { ShortUrl } = require("./ShortUrl")
 
 async function getShortUrlInDb(shortUrl) {
   await mongodb()
-  const shortUrlInDb = await ShortUrl.findOne({ shortUrl })
-  return shortUrlInDb
+  return ShortUrl.findOne({ shortUrl })
 }
 
 module.exports = { getShortUrlInDb }

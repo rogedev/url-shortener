@@ -1,7 +1,8 @@
 const { getShortUrlInDb } = require("../database/shortUrl/getShortUrlInDb")
+
 async function getUrlFromShortUrl(shortUrl) {
-  const shortUrlInDb = await getShortUrlInDb(shortUrl)
-  return shortUrlInDb.originalUrl
+  const { originalUrl } = await getShortUrlInDb(shortUrl)
+  return originalUrl
 }
 
 module.exports = { getUrlFromShortUrl }
