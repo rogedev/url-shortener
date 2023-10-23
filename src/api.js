@@ -23,4 +23,4 @@ function api(app) {
   })
 }
 
-module.exports = api
+module.exports = { api }

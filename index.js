@@ -1,7 +1,7 @@
 const express = require("express")
-const { config } = require("./config")
+const { configApp } = require("./configApp")
 const { api } = require("./src/api")
 
 const app = express()
-config(app)
+configApp(app)
 api(app)
